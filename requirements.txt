@@ -62,5 +62,6 @@ tqdm==4.63.0
 typing-extensions==4.1.1
 urllib3==1.26.9
 Werkzeug==2.0.3
-wrapt==1.14.0
+# wrapt==1.14.0
+wrapt~=1.12.1
 zipp==3.7.0
