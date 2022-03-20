@@ -2,7 +2,7 @@ from flask import Flask, flash, request, redirect, url_for, render_template
 import urllib.request
 import os
 from werkzeug.utils import secure_filename
-from detection import detect
+from detection import detection
  
 app = Flask(__name__)
  
@@ -35,7 +35,7 @@ def upload_image():
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         # replace this function
-        detect(file.filename,False)
+        detection(file.filename,False)
         #print('upload_image filename: ' + filename)
         flash('Image successfully uploaded and displayed below')
         return render_template('index.html', filename=filename)
@@ -50,22 +50,22 @@ def display_image(filename):
 
 @app.route('/Try_it')
 def Try_it():
-    filename='car1.jpg'
-    detect(filename,True)
+    filename='Audi 100 Sedan 1994.jpg'
+    detection(filename,go=True)
     flash('Image successfully uploaded and displayed below')
     return render_template('index.html', filename=filename)
 
 @app.route('/tRy_it')
 def tRy_it():
-    filename='car2.jpg'
-    detect(filename,True)
+    filename='BMW Z4 Convertible 2012.jpg'
+    detection(filename,go=True)
     flash('Image successfully uploaded and displayed below')
     return render_template('index.html', filename=filename)
 
 @app.route('/trY_it')
 def trY_it():
-    filename='car3.jpg'
-    detect(filename,True)
+    filename='Ford Mustange Convertible 2007.jpg'
+    detection(filename,go=True)
     flash('Image successfully uploaded and displayed below')
     return render_template('index.html', filename=filename)
  

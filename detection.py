@@ -8,7 +8,7 @@ from keras.models import model_from_json
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
-def detection(classes, filename, go):
+def detection(filename, go):
 
     # load json and create model
     json_file = open('models/model2.json', 'r')
