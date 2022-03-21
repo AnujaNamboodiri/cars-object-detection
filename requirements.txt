@@ -13,7 +13,7 @@ MarkupSafe
 numpy
 opencv-python
 # opencv-python-headless
-libgl1-mesa-glx
+# libgl1-mesa-glx
 
 pandas
 Pillow
