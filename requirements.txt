@@ -12,7 +12,9 @@ keras
 MarkupSafe
 numpy
 opencv-python
-opencv-python-headless
+# opencv-python-headless
+libgl1-mesa-glx
+
 pandas
 Pillow
 pyparsing
