@@ -14,3 +14,4 @@ zipp==3.7.0
 gunicorn
 streamlit
 keras
+tensorflow-cpu
