@@ -7,7 +7,7 @@ itsdangerous==2.1.1
 Jinja2==3.0.3
 MarkupSafe==2.1.1
 numpy==1.21.5
-opencv-python==4.2.0.32
+opencv-python==3.3.0.9
 typing-extensions==4.1.1
 Werkzeug==2.0.3
 zipp==3.7.0
