@@ -11,6 +11,7 @@ kiwisolver
 keras
 MarkupSafe
 numpy
+opencv-python
 opencv-python-headless
 pandas
 Pillow
