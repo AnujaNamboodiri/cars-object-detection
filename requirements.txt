@@ -5,33 +5,27 @@ Flask
 Flask-SQLAlchemy
 greenlet
 gunicorn
+h5py
 itsdangerous
+idna 
+importlib-metadata 
 Jinja2
 kiwisolver
+keras
 MarkupSafe
 matplotlib
 numpy
 opencv-python-headless
+pandas
 Pillow
 pyparsing
 python-dateutil
+tensorflow-cpu
+streamlit
 six
 SQLAlchemy
 Werkzeug
-
-
-flatbuffers 
-fonttools 
-gast 
-h5py
-idna 
-importlib-metadata 
-keras==2.8.0
-numpy 
-pandas
-tensorflow-cpu
-Werkzeug 
-streamlit
+opencv-python
 
 
 # commenting 
@@ -46,6 +40,9 @@ streamlit
 # typing-extensions #==4.1.1
 # wrapt #==1.14.0
 # zipp #==3.7.0
+# flatbuffers 
+# fonttools 
+# gast 
 
 # tensorboard #==2.0.2
 # tensorboard-data-server #==0.6.1
