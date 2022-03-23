@@ -56,12 +56,33 @@ def detection(filename, go):
     scores, bbox_pred = pred[0][0], pred[1][0]
 
     #Get Label with highest probability
-    class_id = np.argmax(scores)
-    confidence = scores[class_id] 
-
+    
+##Changes made by Sriram for making Dataframe of Scores
+    #class_id = np.argmax(scores)
+    #confidence = scores[class_id] 
+    pred_class = np.argmax(scores)
+    pred_class1 = (scores)
+    print('Real Label :', act_class, '\nPredicted Label: ', pred_class)
+    carname = (classdf["Name"].iloc[pred_class])
+    print("The subject Car belongs to",carname)
+    #print("The Probability of the image being the", carname, 'is',((pred_class1[pred_class])*100))
+    ranks = sorted( [(x,i) for (i,x) in enumerate(pred_class1)], reverse=True )
+    ranks = ranks[0:3]
+    print("Top probability values are as follows:")
+    carnames = list()
+    classv = list()
+    probv = list()
+    for x,y in ranks:
+      carname = (classdf["Name"].iloc[y])
+      carnames.append(carname)
+      classv.append(y)
+      x = (round(x, 3))*100
+      probv.append(x)
+    df = pd.DataFrame(list(zip(classv, carnames,probv)),columns =['Class', 'Carname', 'Score Values'])
+    print(df)
     # print(class_id)
     # print(confidence)
-
+##Changes made by Sriram for making Dataframe of Scores
     # Get the actual names for the given label
     pos = val_list.index(class_id)
     class_id = key_list[pos]
